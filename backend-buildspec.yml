@@ -15,6 +15,9 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
+      - cd /backend
+      - pwd
+      - ls
       - docker build -t iamops-priv .
       - docker tag iamops-priv:latest $REPOSITORY_URI:latest
       - docker tag iamops-priv:latest $REPOSITORY_URI:$IMAGE_TAG
